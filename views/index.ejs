@@ -39,15 +39,15 @@
           <th width="100">Student Image</th>
           <th width="50">Dob</th>
           <th width="50">Contact</th>
+          <th width="50">Edit</th>
+          <th width="50">Delete</th>
         </tr>
       </thead>
       <tbody>
         <% for(let i=0; i < student.length; i++) { %>
           <tr>
-            <td>
-              <%= student[i].name %>
-            </td>
-            <td><img src="<%= student[i].image %>" width="20%" /></td>
+            <td><%= student[i].name %></td>
+            <td><img src="images/<%= student[i].image %>" width="20%" /></td>
             <td>
               <%= new Date(student[i].dob).toLocaleDateString('en-US', {month: 'short' , day: '2-digit' ,
                 year: 'numeric' }) %>
